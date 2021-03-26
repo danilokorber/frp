@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "version": "1.2.4",
+  "name": "platypus",
+  "version": "0.1.0",
   "templateVersion": "1.2.4",
   "jenkins": {
     "dns": {

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "template-ng": {
+    "platypus": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -34,13 +34,13 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "template",
+      "prefix": "platypus",
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
           "options": {
             "extraWebpackConfig": "./config/webpack.config.js",
-            "outputPath": "dist/template-ng",
+            "outputPath": "dist/platypus",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -84,18 +84,18 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "extraWebpackConfig": "./config/webpack.config.js",
-            "browserTarget": "template-ng:build"
+            "browserTarget": "platypus:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "template-ng:build:production"
+              "browserTarget": "platypus:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template-ng:build"
+            "browserTarget": "platypus:build"
           }
         },
         "test": {
@@ -122,16 +122,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "template-ng:serve"
+            "devServerTarget": "platypus:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "template-ng:serve:production"
+              "devServerTarget": "platypus:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "template-ng"
+  "defaultProject": "platypus"
 }
