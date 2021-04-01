@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'box-header',
@@ -8,6 +9,8 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 })
 export class BoxHeaderComponent implements OnInit {
   @Input() icon: IconDefinition;
+
+  iconClose: IconDefinition = faTimes;
 
   constructor() {}
 
