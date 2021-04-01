@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faCompressAlt, faCross, faExpandAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowUp, faTimes, faWindowMaximize, faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'box-header',
@@ -9,16 +9,23 @@ import { faCompressAlt, faCross, faExpandAlt, faTimes } from '@fortawesome/free-
 })
 export class BoxHeaderComponent implements OnInit {
   @Input() icon: IconDefinition;
+  @Input() collapsable: boolean = false;
+  @Output() onResize: EventEmitter<boolean> = new EventEmitter();
+
+  isCollapsed: boolean = false;
 
   iconClose: IconDefinition = faTimes;
 
-  iconExpand: IconDefinition = faExpandAlt;
-  iconCompress: IconDefinition = faCompressAlt;
-  iconResize: IconDefinition = this.iconCompress;
-
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.icon);
+  ngOnInit(): void {}
+
+  iconResize(): IconDefinition {
+    return this.isCollapsed ? faArrowDown : faArrowUp;
+  }
+
+  toggle() {
+    this.isCollapsed = !this.isCollapsed;
+    this.onResize.emit(this.isCollapsed);
   }
 }
