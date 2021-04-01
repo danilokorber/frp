@@ -1,0 +1,49 @@
+<div class="flex w-screen h-screen overflow-hidden bg-blueGray-100">
+  <!-- SIDEBAR -->
+  <div class="max-w-sm bg-gradient-to-b from-blueGray-700 via-blueGray-700 to-blueGray-600">
+    <div class="flex h-18 bg-gradient-to-b from-lightBlue-800 to-lightBlue-900">
+      <div class="m-auto">
+        <img src="/assets/icons/platypus_48.png" />
+      </div>
+    </div>
+    <div class="w-18 overflow-hidden whitespace-nowrap text-gray-400">
+      <platypus-menu-item *ngFor="let r of this.leftMenuItems" [route]="r"></platypus-menu-item>
+    </div>
+  </div>
+
+  <!-- MAIN AREA -->
+  <div class="w-full text-left">
+    <!-- HEADER -->
+    <div class="flex h-18 bg-gradient-to-b from-lightBlue-800 to-lightBlue-900">
+      <div class="m-auto ml-2 inline-block text-4xl text-blueGray-100">Platypus</div>
+
+      <div class="flex my-auto float-right">
+        <control-mail-alert></control-mail-alert>
+        <control-notification-alert></control-notification-alert>
+      </div>
+
+      <div class="flex w-18 mx-4 float-right text-4xl text-blueGray-100">
+        <nz-avatar class="m-auto" nzIcon="user" [nzSize]="48"></nz-avatar>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="overflow-x-hidden overflow-y-auto">
+      <div class="px-4 py-2 my-2">
+        <div class="text-3xl font-extralight inline-block">{{ this.title }}</div>
+        <div *ngIf="this.title != 'Home'" class="flex text-xs text-gray-600 float-right">
+          <div class="my-auto inline-block mr-2">
+            <a routerLink="/Home"><fa-icon class="mr-2" [icon]="this.iconHome"></fa-icon></a>
+            >
+          </div>
+          <div class="my-auto inline-block">
+            <nz-breadcrumb [nzAutoGenerate]="true"></nz-breadcrumb>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 text-lg">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

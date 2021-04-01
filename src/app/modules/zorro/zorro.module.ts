@@ -5,10 +5,10 @@ import { CommonModule } from '@angular/common';
 // import { NzAlertModule } from 'ng-zorro-antd/alert';
 // import { NzAnchorModule } from 'ng-zorro-antd/anchor';
 // import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
-// import { NzAvatarModule } from 'ng-zorro-antd/avatar';
+import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 // import { NzBackTopModule } from 'ng-zorro-antd/back-top';
-// import { NzBadgeModule } from 'ng-zorro-antd/badge';
-// import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 // import { NzButtonModule } from 'ng-zorro-antd/button';
 // import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 // import { NzCardModule } from 'ng-zorro-antd/card';
@@ -78,11 +78,11 @@ import { CommonModule } from '@angular/common';
     // NzAlertModule,
     // NzAnchorModule,
     // NzAutocompleteModule,
-    // NzAvatarModule,
+    NzAvatarModule,
     // NzBackTopModule,
-    // NzBadgeModule,
+    NzBadgeModule,
     // NzButtonModule,
-    // NzBreadCrumbModule,
+    NzBreadCrumbModule,
     // NzCalendarModule,
     // NzCardModule,
     // NzCarouselModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '@env/environment';
 
 @Component({
   selector: 'pages-home',
@@ -7,8 +6,6 @@ import { environment } from '@env/environment';
   styleUrls: ['./home.component.scss'],
 })
 export class HomePage implements OnInit {
-  version: string = environment.version;
-
   constructor() {}
 
   ngOnInit(): void {}

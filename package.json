@@ -4,9 +4,9 @@
   "templateVersion": "1.2.4",
   "jenkins": {
     "dns": {
-      "host": "template",
-      "domain": "easyware.io",
-      "resourceGroup": "Easyware",
+      "host": "platypus",
+      "domain": "korber.com.br",
+      "resourceGroup": "korber",
       "cname": "obelix.easyware.io"
     },
     "traefik": {
@@ -16,7 +16,7 @@
       "hostname": "nexus.easyware.io",
       "hostedPort": 8083,
       "groupPort": 8082,
-      "imageGroup": "easyware"
+      "imageGroup": "korber"
     },
     "docker": {
       "labels": "./config/dockerLabels.txt",
