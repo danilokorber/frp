@@ -5,6 +5,7 @@ import { BoxSuccessDirective } from './box-success.directive';
 import { BoxWarningDirective } from './box-warning.directive';
 import { BoxErrorDirective } from './box-error.directive';
 import { BoxInfoDirective } from './box-info.directive';
+import { BoxCollapsableDirective } from './box-collapsable.directive';
 import { GridDirective } from './grid.directive';
 import { GridColsDirective } from './grid-cols.directive';
 import { GridGapDirective } from './grid-gap.directive';
@@ -19,6 +20,7 @@ import { GridGapDirective } from './grid-gap.directive';
     GridDirective,
     GridColsDirective,
     GridGapDirective,
+    BoxCollapsableDirective,
   ],
   imports: [CommonModule],
   exports: [
@@ -27,6 +29,7 @@ import { GridGapDirective } from './grid-gap.directive';
     BoxWarningDirective,
     BoxErrorDirective,
     BoxInfoDirective,
+    BoxCollapsableDirective,
     GridDirective,
     GridColsDirective,
     GridGapDirective,
