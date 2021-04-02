@@ -4,7 +4,7 @@
   </span>
   <ng-content></ng-content>
   <span *ngIf="this.closeable" class="px-2 float-right cursor-pointer">
-    <fa-icon [icon]="iconClose"></fa-icon>
+    <fa-icon [icon]="iconClose" (click)="this.closeBox()"></fa-icon>
   </span>
   <span *ngIf="this.collapsable" class="px-2 float-right cursor-pointer">
     <fa-icon [icon]="iconResize()" (click)="this.toggle()"></fa-icon>

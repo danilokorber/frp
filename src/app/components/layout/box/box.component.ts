@@ -21,16 +21,21 @@ export class BoxComponent implements OnInit {
   @Input() collapsable: boolean = false;
   @Input() closeable: boolean = false;
   @Input() isCollapsed: boolean = false;
+  @Input() isClosed: boolean = false;
 
   constructor() {}
 
   @ContentChild(BoxHeaderComponent) boxHeader: BoxHeaderComponent;
 
   ngAfterContentInit() {
-    this.boxHeader.collapsable = this.collapsable;
+    this.boxHeader.collapsable = this.isCollapsed || this.collapsable;
+    this.boxHeader.isCollapsed = this.isCollapsed;
     this.boxHeader.closeable = this.closeable;
     this.boxHeader.onResize.subscribe((event) => {
       this.isCollapsed = event;
+    });
+    this.boxHeader.onClose.subscribe(() => {
+      this.isClosed = true;
     });
   }
 

@@ -12,6 +12,7 @@ export class BoxHeaderComponent implements OnInit {
   @Input() collapsable: boolean = false;
   @Input() closeable: boolean = false;
   @Output() onResize: EventEmitter<boolean> = new EventEmitter();
+  @Output() onClose: EventEmitter<any> = new EventEmitter();
 
   isCollapsed: boolean = false;
 
@@ -28,5 +29,9 @@ export class BoxHeaderComponent implements OnInit {
   toggle() {
     this.isCollapsed = !this.isCollapsed;
     this.onResize.emit(this.isCollapsed);
+  }
+
+  closeBox() {
+    this.onClose.emit(this.isCollapsed);
   }
 }
