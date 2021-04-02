@@ -3,7 +3,7 @@
     <fa-icon [icon]="this.icon"></fa-icon>
   </span>
   <ng-content></ng-content>
-  <span class="px-2 float-right cursor-pointer">
+  <span *ngIf="this.closeable" class="px-2 float-right cursor-pointer">
     <fa-icon [icon]="iconClose"></fa-icon>
   </span>
   <span *ngIf="this.collapsable" class="px-2 float-right cursor-pointer">

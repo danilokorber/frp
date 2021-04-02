@@ -10,6 +10,7 @@ import { faArrowDown, faArrowUp, faTimes, faWindowMaximize, faWindowMinimize } f
 export class BoxHeaderComponent implements OnInit {
   @Input() icon: IconDefinition;
   @Input() collapsable: boolean = false;
+  @Input() closeable: boolean = false;
   @Output() onResize: EventEmitter<boolean> = new EventEmitter();
 
   isCollapsed: boolean = false;

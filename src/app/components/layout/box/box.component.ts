@@ -1,5 +1,5 @@
 import { trigger, state, style, AUTO_STYLE, transition, animate } from '@angular/animations';
-import { Component, ContentChild, Input, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { BoxHeaderComponent } from './box-header.component';
 
 const DEFAULT_DURATION = 300;
@@ -19,6 +19,7 @@ const DEFAULT_DURATION = 300;
 })
 export class BoxComponent implements OnInit {
   @Input() collapsable: boolean = false;
+  @Input() closeable: boolean = false;
   @Input() isCollapsed: boolean = false;
 
   constructor() {}
@@ -27,6 +28,7 @@ export class BoxComponent implements OnInit {
 
   ngAfterContentInit() {
     this.boxHeader.collapsable = this.collapsable;
+    this.boxHeader.closeable = this.closeable;
     this.boxHeader.onResize.subscribe((event) => {
       this.isCollapsed = event;
     });

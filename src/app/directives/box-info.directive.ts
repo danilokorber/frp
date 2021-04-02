@@ -6,7 +6,6 @@ import { Directive, ElementRef } from '@angular/core';
 export class BoxInfoDirective {
   constructor(private el: ElementRef) {}
   ngAfterViewInit(): void {
-    // this.el.nativeElement.firstChild.className += ' border-lightBlue-900 bg-lightBlue-50 ';
     this.el.nativeElement.firstChild.firstChild.firstChild.className += ' bg-gradient-to-b from-lightBlue-800 to-lightBlue-900 text-white ';
   }
 }
