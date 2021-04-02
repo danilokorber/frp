@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'platypus-rancho',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rancho.component.scss'],
 })
 export class RanchoPage implements OnInit {
+  iconHome = faHome;
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,7 +1,9 @@
-<div class="border rounded-sm shadow-sm bg-white text-base">
+<div *ngIf="!this.isClosed" class="border rounded-sm shadow-sm bg-white text-base">
   <ng-content select="box-header"></ng-content>
-  <div class="p-2">
-    <ng-content></ng-content>
+  <div class="overflow-hidden" [@collapse]="this.isCollapsed">
+    <div class="p-2">
+      <ng-content></ng-content>
+    </div>
+    <ng-content select="box-footer"></ng-content>
   </div>
-  <ng-content select="box-footer"></ng-content>
 </div>

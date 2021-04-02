@@ -1,3 +1,12 @@
 <div class="p-2 rounded-t-sm border-b bg-gradient-to-b from-gray-500 to-gray-600 text-white border-gray-200 font-semibold text-lg">
+  <span class="mr-2" *ngIf="this.icon != undefined">
+    <fa-icon [icon]="this.icon"></fa-icon>
+  </span>
   <ng-content></ng-content>
+  <span *ngIf="this.closeable" class="px-2 float-right cursor-pointer">
+    <fa-icon [icon]="iconClose" (click)="this.closeBox()"></fa-icon>
+  </span>
+  <span *ngIf="this.collapsable" class="px-2 float-right cursor-pointer">
+    <fa-icon [icon]="iconResize()" (click)="this.toggle()"></fa-icon>
+  </span>
 </div>
