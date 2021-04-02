@@ -5,7 +5,9 @@
       <box-footer>Footer</box-footer>
       Content
     </box>
-    <box box-success [closeable]="true" [isCollapsed]="true"><box-header>Header</box-header> Content <box-footer>Footer</box-footer></box>
+    <box box-success [closeable]="true" [isCollapsed]="true" (onCollapse)="onCollapse()" (onExpand)="onExpand()" (onClose)="onClose()"
+      ><box-header>Header</box-header> Content <box-footer>Footer</box-footer></box
+    >
     <box box-warning [collapsable]="true" [closeable]="true" [isCollapsed]="true">
       <box-header>Header</box-header> Content <box-footer>Footer</box-footer>
     </box>

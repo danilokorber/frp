@@ -11,4 +11,14 @@ export class RanchoPage implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onCollapse() {
+    console.log('collapsed');
+  }
+  onExpand() {
+    console.log('expanded');
+  }
+  onClose() {
+    console.log('closed');
+  }
 }
