@@ -9,18 +9,11 @@ import { faArrowLeft, faArrowRight, faHome, IconDefinition } from '@fortawesome/
 })
 export class LayoutComponent implements OnInit {
   title: string = '[title]';
-  routes: Routes = [];
-  leftMenuItems: Routes = [];
   iconHome: IconDefinition = faHome;
-  iconLeft: IconDefinition = faArrowLeft;
-  iconRight: IconDefinition = faArrowRight;
 
   public constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     const data: Data = this.activatedRoute.snapshot.data;
     this.title = this.getTitle(this.activatedRoute);
-    this.routes = router.config;
-
-    this.leftMenuItems = router.config.filter((r) => r.data && r.data.icon);
   }
 
   getTitle(ar: ActivatedRoute): string {

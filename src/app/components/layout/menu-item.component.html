@@ -1,5 +1,8 @@
-<a class="flex h-12 ‚hover:text-white" [routerLink]="'/' + this.route.path" [routerLinkActive]="'text-white'">
-  <div class="w-18 m-auto text-2xl text-center">
-    <fa-icon [icon]="this.route.data.icon"></fa-icon>
+<a class="flex h-12 hover:text-white" [routerLink]="'/' + this.route.path" [routerLinkActive]="'text-white'">
+  <div class="w-18 my-auto text-2xl text-left">
+    <fa-icon [icon]="this.route.data.icon" [fixedWidth]="true" class="ml-5 mr-6"></fa-icon>
+  </div>
+  <div class="w-36 my-auto text-xl text-left">
+    <span>{{ this.route.data.title }}</span>
   </div>
 </a>
