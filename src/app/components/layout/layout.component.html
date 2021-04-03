@@ -1,6 +1,6 @@
 <div class="flex w-screen h-screen overflow-hidden bg-blueGray-100">
   <!-- SIDEBAR -->
-  <div class="max-w-sm bg-gradient-to-b from-blueGray-700 via-blueGray-700 to-blueGray-600">
+  <div class="flex flex-col max-w-sm bg-gradient-to-b from-blueGray-700 via-blueGray-700 to-blueGray-600">
     <div class="flex h-18 bg-gradient-to-b from-lightBlue-800 to-lightBlue-900">
       <div class="m-auto">
         <img src="/assets/icons/platypus_48.png" alt="Platypus" />
@@ -8,6 +8,9 @@
     </div>
     <div class="w-18 overflow-hidden whitespace-nowrap text-gray-400">
       <platypus-menu-item *ngFor="let r of this.leftMenuItems" [route]="r"></platypus-menu-item>
+    </div>
+    <div class="flex-1 absolute bottom-0 w-18 p-4 text-center text-gray-400">
+      <fa-icon [icon]="this.iconRight"></fa-icon>
     </div>
   </div>
 
