@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Data, Router, Routes } from '@angular/router';
-import { faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight, faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'platypus',
@@ -12,6 +12,8 @@ export class LayoutComponent implements OnInit {
   routes: Routes = [];
   leftMenuItems: Routes = [];
   iconHome: IconDefinition = faHome;
+  iconLeft: IconDefinition = faArrowLeft;
+  iconRight: IconDefinition = faArrowRight;
 
   public constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     const data: Data = this.activatedRoute.snapshot.data;

@@ -9,6 +9,10 @@ import { BoxCollapsableDirective } from './box-collapsable.directive';
 import { GridDirective } from './grid.directive';
 import { GridColsDirective } from './grid-cols.directive';
 import { GridGapDirective } from './grid-gap.directive';
+import { ProgressBarSuccessDirective } from './progress-bar-success.directive';
+import { ProgressBarErrorDirective } from './progress-bar-error.directive';
+import { ProgressBarWarningDirective } from './progress-bar-warning.directive';
+import { ProgressBarInfoDirective } from './progress-bar-info.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { GridGapDirective } from './grid-gap.directive';
     GridColsDirective,
     GridGapDirective,
     BoxCollapsableDirective,
+    ProgressBarSuccessDirective,
+    ProgressBarErrorDirective,
+    ProgressBarWarningDirective,
+    ProgressBarInfoDirective,
   ],
   imports: [CommonModule],
   exports: [
@@ -33,6 +41,10 @@ import { GridGapDirective } from './grid-gap.directive';
     GridDirective,
     GridColsDirective,
     GridGapDirective,
+    ProgressBarSuccessDirective,
+    ProgressBarErrorDirective,
+    ProgressBarWarningDirective,
+    ProgressBarInfoDirective,
   ],
 })
 export class DirectivesModule {}

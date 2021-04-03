@@ -6,7 +6,6 @@ import { Directive, ElementRef } from '@angular/core';
 export class BoxWarningDirective {
   constructor(private el: ElementRef) {}
   ngAfterViewInit(): void {
-    // this.el.nativeElement.firstChild.className += ' border-amber-500 bg-amber-50 ';
     this.el.nativeElement.firstChild.firstChild.firstChild.className += ' bg-gradient-to-b from-amber-400 to-amber-500 text-white ';
   }
 }

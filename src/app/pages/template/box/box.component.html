@@ -1,0 +1,17 @@
+<platypus>
+  <div grid grid-cols="3" grid-gap="4">
+    <box [collapsable]="true" [isCollapsed]="true">
+      <box-header [icon]="this.iconHome">Header</box-header>
+      <box-footer>Footer</box-footer>
+      Content
+    </box>
+    <box box-success [closeable]="true" [isCollapsed]="true" (onCollapse)="onCollapse()" (onExpand)="onExpand()" (onClose)="onClose()"
+      ><box-header>Header</box-header> Content <box-footer>Footer</box-footer></box
+    >
+    <box box-warning [collapsable]="true" [closeable]="true" [isCollapsed]="true">
+      <box-header>Header</box-header> Content <box-footer>Footer</box-footer>
+    </box>
+    <box box-error><box-header>Header</box-header> Content <box-footer>Footer</box-footer></box>
+    <box box-info><box-header>Header</box-header> Content <box-footer>Footer</box-footer></box>
+  </div>
+</platypus>
