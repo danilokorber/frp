@@ -1,5 +1,5 @@
 import { trigger, state, style, AUTO_STYLE, transition, animate } from '@angular/animations';
-import { Component, ContentChild, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { BoxHeaderComponent } from './box-header.component';
 
 const DEFAULT_DURATION = 300;
@@ -22,6 +22,9 @@ export class BoxComponent implements OnInit {
   @Input() closeable: boolean = false;
   @Input() isCollapsed: boolean = false;
   @Input() isClosed: boolean = false;
+  @Output() onCollapse: EventEmitter<boolean> = new EventEmitter();
+  @Output() onExpand: EventEmitter<boolean> = new EventEmitter();
+  @Output() onClose: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {}
 
@@ -33,9 +36,11 @@ export class BoxComponent implements OnInit {
     this.boxHeader.closeable = this.closeable;
     this.boxHeader.onResize.subscribe((event) => {
       this.isCollapsed = event;
+      this.isCollapsed ? this.onCollapse.emit() : this.onExpand.emit();
     });
     this.boxHeader.onClose.subscribe(() => {
       this.isClosed = true;
+      this.onClose.emit();
     });
   }
 
