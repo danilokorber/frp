@@ -16,6 +16,12 @@ const DEFAULT_DURATION = 200;
       transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),
       transition('true => false', animate(DEFAULT_DURATION + 'ms ease-out')),
     ]),
+    trigger('rotate', [
+      state('false', style({ transform: 'rotate(-180deg)' })),
+      state('true', style({ transform: 'rotate(0)' })),
+      transition('false => true', animate(DEFAULT_DURATION + 'ms ease-in')),
+      transition('true => false', animate(DEFAULT_DURATION + 'ms ease-out')),
+    ]),
   ],
 })
 export class SidebarComponent implements OnInit {
