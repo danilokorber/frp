@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Data, Router, Routes } from '@angular/router';
-import { faArrowLeft, faArrowRight, faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute, Router, Data } from '@angular/router';
+import { IconDefinition, faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'platypus',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+  selector: 'platypus-body',
+  templateUrl: './body.component.html',
+  styleUrls: ['./body.component.scss'],
 })
-export class LayoutComponent implements OnInit {
+export class BodyComponent implements OnInit {
   title: string = '[title]';
   iconHome: IconDefinition = faHome;
 
-  public constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  public constructor(private activatedRoute: ActivatedRoute) {
     const data: Data = this.activatedRoute.snapshot.data;
     this.title = this.getTitle(this.activatedRoute);
   }

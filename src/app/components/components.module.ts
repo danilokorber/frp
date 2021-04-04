@@ -7,18 +7,30 @@ import { ZorroModule } from '@modules/zorro/zorro.module';
 
 import { ControlsModule } from '@controls/controls.module';
 
-import { LayoutComponent } from './layout/layout.component';
-import { MenuItemComponent } from './layout/menu-item.component';
+import { MenuItemComponent } from './layout/platypus/sidebar/menu-item.component';
 
 import { BoxComponent } from './box/box.component';
 import { BoxHeaderComponent } from './box/box-header.component';
 import { BoxFooterComponent } from './box/box-footer.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { SidebarComponent } from './layout/platypus/sidebar/sidebar.component';
+import { PlatypusLayoutComponent } from './layout/platypus/platypus.component';
+import { HeaderComponent } from './layout/platypus/header/header.component';
+import { BodyComponent } from './layout/platypus/body/body.component';
 
 @NgModule({
-  declarations: [LayoutComponent, MenuItemComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent, SidebarComponent],
+  declarations: [
+    MenuItemComponent,
+    BoxComponent,
+    BoxHeaderComponent,
+    BoxFooterComponent,
+    ProgressBarComponent,
+    SidebarComponent,
+    PlatypusLayoutComponent,
+    HeaderComponent,
+    BodyComponent,
+  ],
   imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, ControlsModule],
-  exports: [LayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent],
+  exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent],
 })
 export class ComponentsModule {}
