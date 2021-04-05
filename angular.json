@@ -47,7 +47,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/assets"],
-            "styles": ["src/assets/css/ng-zorro-antd-theme.less", "src/styles.scss"],
+            "styles": ["src/assets/css/ng-zorro-antd-theme.less", "src/styles.scss", "node_modules/highlight.js/styles/vs2015.css"],
             "scripts": []
           },
           "configurations": {

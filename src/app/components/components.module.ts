@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ZorroModule } from '@modules/zorro/zorro.module';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { ControlsModule } from '@controls/controls.module';
 
@@ -18,6 +19,7 @@ import { BoxHeaderComponent } from './box/box-header.component';
 import { BoxFooterComponent } from './box/box-footer.component';
 
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { CodeBlockComponent } from './code-block/code-block.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,17 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     PlatypusLayoutComponent,
     HeaderComponent,
     BodyComponent,
+    CodeBlockComponent,
   ],
-  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, ControlsModule],
-  exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent],
+  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule],
+  exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent, CodeBlockComponent],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      },
+    },
+  ],
 })
 export class ComponentsModule {}
