@@ -13,6 +13,7 @@ import { ProgressBarSuccessDirective } from './progress-bar-success.directive';
 import { ProgressBarErrorDirective } from './progress-bar-error.directive';
 import { ProgressBarWarningDirective } from './progress-bar-warning.directive';
 import { ProgressBarInfoDirective } from './progress-bar-info.directive';
+import { BoxClosableDirective } from './box-closable.directive';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { ProgressBarInfoDirective } from './progress-bar-info.directive';
     BoxWarningDirective,
     BoxErrorDirective,
     BoxInfoDirective,
+    BoxCollapsableDirective,
+    BoxClosableDirective,
     GridDirective,
     GridColsDirective,
     GridGapDirective,
-    BoxCollapsableDirective,
     ProgressBarSuccessDirective,
     ProgressBarErrorDirective,
-    ProgressBarWarningDirective,
     ProgressBarInfoDirective,
+    ProgressBarWarningDirective,
   ],
   imports: [CommonModule],
   exports: [
@@ -38,6 +40,7 @@ import { ProgressBarInfoDirective } from './progress-bar-info.directive';
     BoxErrorDirective,
     BoxInfoDirective,
     BoxCollapsableDirective,
+    BoxClosableDirective,
     GridDirective,
     GridColsDirective,
     GridGapDirective,

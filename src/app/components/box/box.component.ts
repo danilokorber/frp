@@ -30,19 +30,21 @@ export class BoxComponent implements OnInit {
 
   @ContentChild(BoxHeaderComponent) boxHeader: BoxHeaderComponent;
 
+  ngOnInit(): void {}
+
   ngAfterContentInit() {
     this.boxHeader.collapsable = this.isCollapsed || this.collapsable;
     this.boxHeader.isCollapsed = this.isCollapsed;
     this.boxHeader.closeable = this.closeable;
+
     this.boxHeader.onResize.subscribe((event) => {
       this.isCollapsed = event;
       this.isCollapsed ? this.onCollapse.emit() : this.onExpand.emit();
     });
+
     this.boxHeader.onClose.subscribe(() => {
       this.isClosed = true;
       this.onClose.emit();
     });
   }
-
-  ngOnInit(): void {}
 }
