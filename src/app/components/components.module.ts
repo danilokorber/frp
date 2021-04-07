@@ -21,6 +21,7 @@ import { BoxFooterComponent } from './box/box-footer.component';
 
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CodeBlockComponent } from './code-block/code-block.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CodeBlockComponent } from './code-block/code-block.component';
     BodyComponent,
     CodeBlockComponent,
     MenuComponent,
+    AccountComponent,
   ],
   imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule],
   exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent, CodeBlockComponent],
