@@ -1,12 +1,6 @@
-<div class="overflow-hidden whitespace-nowrap text-gray-400" [@collapse]="this.isCollapsed">
-  <platypus-menu-item *ngFor="let r of this.leftMenuItems" [route]="r"></platypus-menu-item>
+<div class="overflow-hidden whitespace-nowrap text-blueGray-400" [@collapse]="this.isCollapsed">
+  <platypus-menu [routes]="this.leftMenuItems"></platypus-menu>
 </div>
-<div class="flex-1 fixed bottom-0 p-4 pl-7 text-gray-400">
-  <fa-icon
-    [icon]="this.iconToggle"
-    [fixedWidth]="true"
-    [rotate]="this.isCollapsed ? 0 : 180"
-    class="cursor-pointer"
-    (click)="this.toggle()"
-  ></fa-icon>
+<div class="flex-1 fixed bottom-0 p-4 pl-7 text-blueGray-400">
+  <fa-icon [icon]="this.iconToggle" [fixedWidth]="true" class="cursor-pointer" (click)="this.toggle()"></fa-icon>
 </div>

@@ -11,6 +11,7 @@ import { ControlsModule } from '@controls/controls.module';
 import { PlatypusLayoutComponent } from './layout/platypus/platypus.component';
 import { HeaderComponent } from './layout/platypus/header/header.component';
 import { SidebarComponent } from './layout/platypus/sidebar/sidebar.component';
+import { MenuComponent } from './layout/platypus/sidebar/menu.component';
 import { MenuItemComponent } from './layout/platypus/sidebar/menu-item.component';
 import { BodyComponent } from './layout/platypus/body/body.component';
 
@@ -33,6 +34,7 @@ import { CodeBlockComponent } from './code-block/code-block.component';
     HeaderComponent,
     BodyComponent,
     CodeBlockComponent,
+    MenuComponent,
   ],
   imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule],
   exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent, CodeBlockComponent],

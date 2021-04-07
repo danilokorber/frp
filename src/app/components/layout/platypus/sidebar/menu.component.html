@@ -1,0 +1,13 @@
+<div class="flex flex-col w-60">
+  <platypus-menu-item *ngFor="let route of routes" [route]="route"></platypus-menu-item>
+  <!-- <menu-item [route]="this.route"></menu-item> -->
+
+  <!-- <div
+    *ngIf="this.route.children.length > 0"
+    class="flex flex-col my-auto w-60 mt-1 text-base text-left text-blueGray-400 bg-gradient-to-b from-blueGray-100 via-blueGray-100 to-blueGray-200 shadow-inner"
+  >
+    <div *ngFor="let c of this.route.children" class="flex-1">
+      <menu-item [route]="c" [isChild]="true"></menu-item>
+    </div>
+  </div> -->
+</div>

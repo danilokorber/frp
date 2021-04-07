@@ -14,6 +14,7 @@
       "@controls/*": ["./app/controls/*"],
       "@components/*": ["./app/components/*"],
       "@directives/*": ["./app/directives/*"],
+      "@guards/*": ["./app/guards/*"],
       "@pipes/*": ["./app/pipes/*"],
       "@classes/*": ["./app/classes/*"],
       "@enums/*": ["./app/enums/*"],
