@@ -14,9 +14,10 @@ import { DashboardPage } from './dashboard/dashboard.component';
 import { RanchoPage } from './rancho/rancho.component';
 import { ProgressBarPage } from './template/progress-bar/progress-bar.component';
 import { BoxPage } from './template/box/box.component';
+import { LoginPage } from './login/login.component';
 
 @NgModule({
-  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage],
+  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage, LoginPage],
   imports: [CommonModule, RouterModule, ComponentsModule, DirectivesModule, FontAwesomeModule, ZorroModule],
   exports: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage],
 })

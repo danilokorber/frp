@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, Data } from '@angular/router';
-import { IconDefinition, faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'platypus',

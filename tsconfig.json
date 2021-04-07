@@ -1,6 +1,9 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -22,6 +25,7 @@
       "@controls/*": ["./src/app/controls/*"],
       "@components/*": ["./src/app/components/*"],
       "@directives/*": ["./src/app/directives/*"],
+      "@guards/*": ["./src/app/guards/*"],
       "@pipes/*": ["./src/app/pipes/*"],
       "@classes/*": ["./src/app/classes/*"],
       "@enums/*": ["./src/app/enums/*"],

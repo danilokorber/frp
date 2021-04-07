@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ZorroModule } from '@modules/zorro/zorro.module';
+import { AuthModule } from '@modules/auth/auth.module';
 
 import { ControlsModule } from '@controls/controls.module';
 import { PagesModule } from '@pages/pages.module';
@@ -15,6 +16,7 @@ import { ComponentsModule } from '@components/components.module';
 import { DirectivesModule } from '@directives/directives.module';
 
 import { RootComponent } from './root.component';
+import { AuthGuard } from '@guards/auth.guard';
 
 @NgModule({
   declarations: [RootComponent],
@@ -32,8 +34,9 @@ import { RootComponent } from './root.component';
     DirectivesModule,
     FontAwesomeModule,
     ZorroModule,
+    AuthModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [RootComponent],
 })
 export class AppModule {}
