@@ -1,0 +1,23 @@
+<div
+  class="flex w-18 h-18 cursor-pointer"
+  [ngClass]="this.isActive ? ['bg-gradient-to-b', 'from-trueGray-200', 'to-trueGray-100'] : []"
+  (click)="this.toggle()"
+>
+  <nz-avatar class="m-auto" nzIcon="user" [nzSize]="48"></nz-avatar>
+</div>
+
+<div
+  class="flex flex-col absolute right-0 top-18 z-50 w-40 bg-trueGray-100 border-l border-b border-lightBlue-900 text-trueGray-800 text-base overflow-hidden"
+  [@collapse]="this.isActive"
+>
+  <div class="flex-1 py-1 px-2 mb-2 border-b border-lightBlue-900 shadow-bottom-default text-lg font-semibold overflow-hidden">
+    {{ this.username() }}
+  </div>
+
+  <div class="flex-1 py-1 px-2 overflow-hidden cursor-pointer hover:bg-lightBlue-900 hover:text-trueGray-100">
+    <fa-icon [icon]="this.iconAccount" class="my-auto mr-2"></fa-icon>Perfil
+  </div>
+  <div class="flex-1 py-1 px-2 overflow-hidden cursor-pointer hover:bg-lightBlue-900 hover:text-trueGray-100" (click)="this.logout()">
+    <fa-icon [icon]="this.iconExit" class="my-auto mr-2"></fa-icon>Sair
+  </div>
+</div>

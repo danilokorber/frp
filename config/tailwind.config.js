@@ -52,6 +52,9 @@ module.exports = {
       height: {
         18: '4.5rem',
       },
+      inset: {
+        18: '4.5rem',
+      },
       width: {
         18: '4.5rem',
       },
