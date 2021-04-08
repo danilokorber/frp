@@ -35,6 +35,10 @@ export class AccountComponent implements OnInit {
     return this.authService.getProperty('name');
   }
 
+  picture(): string {
+    return this.authService.getProperty('picture') || '/src/assets/icons/platypus_48.png';
+  }
+
   logout(): void {
     this.authService.logout();
   }

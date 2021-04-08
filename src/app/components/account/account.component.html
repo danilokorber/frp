@@ -3,7 +3,7 @@
   [ngClass]="this.isActive ? ['bg-gradient-to-b', 'from-trueGray-200', 'to-trueGray-100'] : []"
   (click)="this.toggle()"
 >
-  <nz-avatar class="m-auto" nzIcon="user" [nzSize]="48"></nz-avatar>
+  <nz-avatar class="m-auto" nzIcon="user" [nzSize]="48" [nzSrc]="this.picture()"></nz-avatar>
 </div>
 
 <div
