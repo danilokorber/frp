@@ -23,7 +23,6 @@ export class MailAlertControl implements OnInit, OnDestroy {
       .pipe(takeWhile(() => this.isAlive))
       .subscribe(() => {
         this.mail.getUnreadMessagesCount('danilo_korber.com.br').subscribe((count: number) => {
-          console.log('New value: ', count);
           this.unreadMessagesCount = count;
         });
       });
