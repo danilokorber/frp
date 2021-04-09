@@ -14,11 +14,11 @@ const authConfig: AuthConfig = {
 };
 
 export const environment = {
-  production: true,
+  production: false,
   version: templateVersion,
   oidcConfig: authConfig,
   api: {
-    url: 'https://platypus-api.easyware.io/api/v1',
+    url: 'https://platypus-api.korber.com.br/api/v1',
     mail: {
       url: '/mail/',
       unreadMessagesCount: '/messages/unread/count',
