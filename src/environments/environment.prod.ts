@@ -17,4 +17,11 @@ export const environment = {
   production: true,
   version: templateVersion,
   oidcConfig: authConfig,
+  api: {
+    url: 'https://platypus-api.easyware.io/api/v1',
+    mail: {
+      url: '/mail/',
+      unreadMessagesCount: '/messages/unread/count',
+    },
+  },
 };

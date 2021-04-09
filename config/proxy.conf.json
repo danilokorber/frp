@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://platypus-api.korber.com.br/api/v1",
+    "secure": false
+  }
+}
