@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Injector } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from '@env/environment';
 import { AuthConfig, NullValidationHandler, OAuthService } from 'angular-oauth2-oidc';
 
@@ -19,7 +20,7 @@ export class AuthService {
     return this._decodedIDToken;
   }
 
-  constructor(private oauthService: OAuthService, private http: HttpClient, private injector: Injector) {}
+  constructor(private oauthService: OAuthService, private router: Router, private http: HttpClient, private injector: Injector) {}
 
   async initAuth(): Promise<any> {
     return new Promise<void>((resolveFn, rejectFn) => {
@@ -62,7 +63,11 @@ export class AuthService {
     return hasIdToken && hasAccessToken;
   }
 
-  public getProperty(propertyName: string): string {
+  public getToken() {
+    return this.oauthService.getIdentityClaims();
+  }
+
+  public getProperty(propertyName: string): any {
     if (this.isAuthenticated) {
       return this.oauthService.getIdentityClaims()[propertyName];
     } else {

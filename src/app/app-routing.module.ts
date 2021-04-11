@@ -9,6 +9,7 @@ import { RanchoPage } from '@pages/rancho/rancho.component';
 import { BoxPage } from '@pages/template/box/box.component';
 import { LoginPage } from '@pages/login/login.component';
 import { AuthGuard } from '@guards/auth.guard';
+import { LoginFinishPage } from '@pages/login-finish/login-finish.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
     ],
   },
   { path: 'Login', component: LoginPage },
+  { path: 'Login-Success', component: LoginFinishPage, canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'Login' },
 ];
 
