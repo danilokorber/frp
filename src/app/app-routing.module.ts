@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { faBoxOpen, faHardHat, faHome, faPiggyBank, faSignal, faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faBoxOpen, faEnvelope, faHardHat, faHome, faPiggyBank, faSignal, faToolbox } from '@fortawesome/free-solid-svg-icons';
 
 import { HomePage } from '@pages/home/home.component';
 import { ProgressBarPage } from '@pages/template/progress-bar/progress-bar.component';
@@ -10,11 +10,13 @@ import { BoxPage } from '@pages/template/box/box.component';
 import { LoginPage } from '@pages/login/login.component';
 import { AuthGuard } from '@guards/auth.guard';
 import { LoginFinishPage } from '@pages/login-finish/login-finish.component';
+import { MailPage } from '@pages/mail/mail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
   { path: 'Home', component: HomePage, canActivate: [AuthGuard], data: { title: 'Home', breadcrumb: 'Home', icon: faHome } },
   { path: 'Rancho', component: RanchoPage, canActivate: [AuthGuard], data: { title: 'Rancho', breadcrumb: 'Rancho', icon: faHardHat } },
+  { path: 'Mail', component: MailPage, canActivate: [AuthGuard], data: { title: 'Mail', breadcrumb: 'Mail', icon: faEnvelope } },
   { path: 'RanchoFinancas', component: RanchoPage, canActivate: [AuthGuard], data: { title: 'Finanças', breadcrumb: 'Finanças', icon: faPiggyBank } },
   {
     path: 'Template',

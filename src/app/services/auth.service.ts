@@ -56,8 +56,6 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
-    console.log(JSON.parse(JSON.stringify(this.oauthService.getIdentityClaims())));
-
     var hasIdToken = this.oauthService.hasValidIdToken();
     var hasAccessToken = this.oauthService.hasValidAccessToken();
     return hasIdToken && hasAccessToken;
@@ -69,7 +67,11 @@ export class AuthService {
 
   public getProperty(propertyName: string): any {
     if (this.isAuthenticated) {
-      return this.oauthService.getIdentityClaims()[propertyName];
+      try {
+        return this.oauthService.getIdentityClaims()[propertyName];
+      } catch {
+        this.logout();
+      }
     } else {
       this.logout();
     }

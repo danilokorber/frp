@@ -18,9 +18,10 @@ export const environment = {
   version: templateVersion,
   oidcConfig: authConfig,
   api: {
-    url: 'https://platypus-api.korber.com.br/api/v1',
+    url: 'http://localhost:8080/api/v1',
     mail: {
       url: '/mail/',
+      messages: '/messages',
       unreadMessagesCount: '/messages/unread/count',
     },
   },

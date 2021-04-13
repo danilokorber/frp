@@ -16,9 +16,10 @@ import { ProgressBarPage } from './template/progress-bar/progress-bar.component'
 import { BoxPage } from './template/box/box.component';
 import { LoginPage } from './login/login.component';
 import { LoginFinishPage } from './login-finish/login-finish.component';
+import { MailPage } from './mail/mail.component';
 
 @NgModule({
-  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage, LoginPage, LoginFinishPage],
+  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage, LoginPage, LoginFinishPage, MailPage],
   imports: [CommonModule, RouterModule, ComponentsModule, DirectivesModule, FontAwesomeModule, ZorroModule],
   exports: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage],
 })

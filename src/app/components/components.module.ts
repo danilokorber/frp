@@ -22,6 +22,7 @@ import { BoxFooterComponent } from './box/box-footer.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CodeBlockComponent } from './code-block/code-block.component';
 import { AccountComponent } from './account/account.component';
+import { MailItemComponent } from './mail/item.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,18 @@ import { AccountComponent } from './account/account.component';
     CodeBlockComponent,
     MenuComponent,
     AccountComponent,
+    MailItemComponent,
   ],
   imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule],
-  exports: [PlatypusLayoutComponent, BoxComponent, BoxHeaderComponent, BoxFooterComponent, ProgressBarComponent, CodeBlockComponent],
+  exports: [
+    PlatypusLayoutComponent,
+    BoxComponent,
+    BoxHeaderComponent,
+    BoxFooterComponent,
+    ProgressBarComponent,
+    CodeBlockComponent,
+    MailItemComponent,
+  ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
