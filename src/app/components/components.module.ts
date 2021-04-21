@@ -22,7 +22,8 @@ import { BoxFooterComponent } from './box/box-footer.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CodeBlockComponent } from './code-block/code-block.component';
 import { AccountComponent } from './account/account.component';
-import { MailItemComponent } from './mail/item.component';
+import { MailThreadComponent } from './mail/thread.component';
+import { PipesModule } from '@pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,9 @@ import { MailItemComponent } from './mail/item.component';
     CodeBlockComponent,
     MenuComponent,
     AccountComponent,
-    MailItemComponent,
+    MailThreadComponent,
   ],
-  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule],
+  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule, PipesModule],
   exports: [
     PlatypusLayoutComponent,
     BoxComponent,
@@ -48,7 +49,7 @@ import { MailItemComponent } from './mail/item.component';
     BoxFooterComponent,
     ProgressBarComponent,
     CodeBlockComponent,
-    MailItemComponent,
+    MailThreadComponent,
   ],
   providers: [
     {

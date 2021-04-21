@@ -22,6 +22,9 @@ export const environment = {
     mail: {
       url: '/mail/',
       messages: '/messages',
+      threads: '/threads',
+      messagesFromThread: '/threads/',
+      messageText: '/messages/text/',
       unreadMessagesCount: '/messages/unread/count',
     },
   },

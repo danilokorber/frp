@@ -1,9 +1,0 @@
-<div class="flex h-12 w-full bg-lightBlue-300">
-  <div class="w-12 flex text-lg">
-    <fa-icon [icon]="this.icon"></fa-icon>
-  </div>
-  <div class="flex-1 flex flex-col">
-    <div class="text-lg">{{ this.thread.messages[0].subject || '[sem assunto]' }}</div>
-    <div class="text-sm">{{ this.thread.messages[0].from.name || this.thread.messages[0].from.address }}</div>
-  </div>
-</div>

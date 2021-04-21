@@ -1,0 +1,56 @@
+<div class="border hover:shadow-sm text-base">
+  <div
+    class="p-2 flex cursor-pointer"
+    [ngClass]="[this.thread.unseen ? 'bg-white font-semibold' : '', this.isActive ? '' : 'hover:bg-gray-100']"
+    (mouseenter)="this.mouseEnter()"
+    (mouseleave)="this.mouseLeave()"
+  >
+    <div class="w-6" (click)="this.toggleReadPanel()">
+      <fa-icon class="text-gray-500" [icon]="this.thread.unseen ? this.iconClose : this.iconOpen"></fa-icon>
+    </div>
+    <div class="w-1/4 px-2 truncate" (click)="this.toggleReadPanel()">
+      {{ this.thread.from | mailMe }}<span *ngIf="this.thread.size > 1"> (...)</span>
+      <fa-icon *ngIf="this.thread.hasAttachments" class="float-right text-gray-500" [icon]="this.iconAttachment"></fa-icon>
+    </div>
+    <div class="flex-1 px-2 truncate" (click)="this.toggleReadPanel()">
+      {{ this.thread.subject || '[sem assunto]' }}
+    </div>
+    <div class="mr-2 float-right" *ngIf="!this.isHovered" (click)="this.toggleReadPanel()">
+      <span class="float-right">{{ this.d }}</span>
+    </div>
+    <div class="w-4 z-10 mr-2 float-right" *ngIf="this.isHovered">
+      <fa-icon class="text-gray-500 hover:text-gray-700" [icon]="this.thread.unseen ? this.iconOpen : this.iconClose"></fa-icon>
+    </div>
+    <div class="w-4 z-10 mr-2 float-right" *ngIf="this.isHovered">
+      <fa-icon class="text-gray-500 hover:text-gray-700" [icon]="this.iconTrash" (click)="this.deleteThread()"></fa-icon>
+    </div>
+  </div>
+
+  <div class="overflow-hidden" [@active]="this.isActive">
+    <div *ngIf="this.messages.length == 0" class="p-2 text-center">
+      <fa-icon class="text-gray-500" [icon]="this.iconLoading" [spin]="true"></fa-icon>
+    </div>
+    <div *ngIf="this.messages.length > 0" class="flex">
+      <div *ngIf="this.messages.length > 1" class="ml-8 w-60 px-2 truncate">
+        <div *ngFor="let m of this.messages" class="p-1 border-b border-gray-200 cursor-pointer" (click)="this.selectMessage(m.emailId)">
+          <fa-icon
+            class="mr-2"
+            [ngClass]="this.selectedMessage.emailId == m.emailId ? 'text-gray-500' : 'text-gray-50'"
+            [icon]="this.iconSelected"
+          ></fa-icon>
+          {{ m.from | mailMe }}
+          <fa-icon *ngIf="m.attachments.length > 0" class="float-right text-gray-500" [icon]="this.iconAttachment"></fa-icon>
+        </div>
+      </div>
+      <!-- <div
+        *ngIf="this.selectedText"
+        class="flex-1 px-2 bg-white"
+        [ngClass]="this.messages.length == 1 ? 'ml-8' : ''"
+        [innerHtml]="this.selectedText.html || this.selectedText.plain"
+      ></div> -->
+      <div class="w-full p-2">
+        <iframe class="bg-white w-full h-96" [src]="this.bodyUrl() | safe" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>

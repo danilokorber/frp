@@ -17,7 +17,6 @@ import { DirectivesModule } from '@directives/directives.module';
 
 import { RootComponent } from './root.component';
 import { AuthGuard } from '@guards/auth.guard';
-
 @NgModule({
   declarations: [RootComponent],
   imports: [

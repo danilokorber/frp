@@ -1,11 +1,17 @@
 <platypus>
-  <div class="flex h-all">
-    <div class="h-full w-1/4 flex flex-col">
-      <mail-item class="flex" *ngFor="let t of this.threads" [thread]="t"></mail-item>
-    </div>
+  <div class="h-all">
+    <!-- <div class="h-full w-1/4 flex flex-col overflow-y-scroll"> -->
+    <mail-thread
+      *ngFor="let t of this.threads"
+      [thread]="t"
+      [isActive]="t.id == this.selectedThreadId ? true : false"
+      (delete)="this.deleteThread($event)"
+      (onSelectThread)="this.changeThread($event)"
+    ></mail-thread>
+    <!-- </div>
     <div class="flex-1 flex flex-col h-full shadow-2xl">
       <div class="h-18 shadow-bottom-lg">Cabeçalho</div>
       <div class="flex-1">Cabeçalho</div>
-    </div>
+    </div> -->
   </div>
 </platypus>
