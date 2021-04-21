@@ -18,14 +18,12 @@ const DEFAULT_DURATION = 200;
     ]),
   ],
 })
-export class AccountComponent implements OnInit {
+export class AccountComponent {
   isActive: boolean = false;
 
   iconAccount: IconDefinition = faUserAlt;
   iconExit: IconDefinition = faSignOutAlt;
   constructor(private authService: AuthService) {}
-
-  ngOnInit(): void {}
 
   toggle() {
     this.isActive = !this.isActive;

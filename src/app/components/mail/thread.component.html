@@ -49,7 +49,7 @@
         [innerHtml]="this.selectedText.html || this.selectedText.plain"
       ></div> -->
       <div class="w-full p-2">
-        <iframe class="bg-white w-full h-96" [src]="this.bodyUrl() | safe" frameborder="0" allowfullscreen></iframe>
+        <iframe [title]="this.thread.subject" class="bg-white w-full h-96" [src]="this.bodyUrl() | safe" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

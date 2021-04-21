@@ -21,6 +21,10 @@ export const environment = {
     url: 'https://platypus-api.korber.com.br/api/v1',
     mail: {
       url: '/mail/',
+      messages: '/messages',
+      threads: '/threads',
+      messagesFromThread: '/threads/',
+      messageText: '/messages/text/',
       unreadMessagesCount: '/messages/unread/count',
     },
   },
