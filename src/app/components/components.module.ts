@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ZorroModule } from '@modules/zorro/zorro.module';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import { ControlsModule } from '@controls/controls.module';
 
@@ -41,7 +40,7 @@ import { PipesModule } from '@pipes/pipes.module';
     AccountComponent,
     MailThreadComponent,
   ],
-  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, HighlightModule, ControlsModule, PipesModule],
+  imports: [CommonModule, RouterModule, FontAwesomeModule, ZorroModule, ControlsModule, PipesModule],
   exports: [
     PlatypusLayoutComponent,
     BoxComponent,
@@ -51,13 +50,6 @@ import { PipesModule } from '@pipes/pipes.module';
     CodeBlockComponent,
     MailThreadComponent,
   ],
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
-      },
-    },
-  ],
+  providers: [],
 })
 export class ComponentsModule {}
