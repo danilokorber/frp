@@ -8,7 +8,7 @@ const authConfig: AuthConfig = {
   oidc: true,
   redirectUri: window.location.origin + '/Login-Success',
   responseType: 'code',
-  scope: 'profile email offline_access',
+  scope: 'profile email roles',
   sessionChecksEnabled: true,
   showDebugInformation: true,
 };
