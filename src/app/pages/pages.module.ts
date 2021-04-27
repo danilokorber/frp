@@ -17,10 +17,11 @@ import { BoxPage } from './template/box/box.component';
 import { LoginPage } from './login/login.component';
 import { LoginFinishPage } from './login-finish/login-finish.component';
 import { MailPage } from './mail/mail.component';
+import { ProjectsPage } from './projects/projects.page';
 
 @NgModule({
-  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage, LoginPage, LoginFinishPage, MailPage],
+  declarations: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage, LoginPage, LoginFinishPage, MailPage, ProjectsPage],
   imports: [CommonModule, RouterModule, ComponentsModule, DirectivesModule, FontAwesomeModule, ZorroModule],
-  exports: [HomePage, DashboardPage, RanchoPage, ProgressBarPage, BoxPage],
+  exports: [HomePage, DashboardPage, ProjectsPage, ProgressBarPage, BoxPage],
 })
 export class PagesModule {}

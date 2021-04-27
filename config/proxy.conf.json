@@ -1,6 +1,8 @@
 {
-  "/api": {
-    "target": "https://platypus-api.korber.com.br/api/v1",
-    "secure": false
+  "/api/*": {
+    "target": "https://platypus-api.korber.com.br/api",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
   }
 }

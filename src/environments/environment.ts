@@ -18,7 +18,7 @@ export const environment = {
   version: templateVersion,
   oidcConfig: authConfig,
   api: {
-    url: 'http://localhost:8080/api/v1',
+    url: '/api/v1',
     mail: {
       url: '/mail/',
       messages: '/messages',

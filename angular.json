@@ -84,7 +84,8 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "extraWebpackConfig": "./config/webpack.config.js",
-            "browserTarget": "platypus:build"
+            "browserTarget": "platypus:build",
+            "proxyConfig": "./config/proxy.conf.json"
           },
           "configurations": {
             "production": {

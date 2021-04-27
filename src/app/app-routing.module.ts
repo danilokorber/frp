@@ -11,12 +11,13 @@ import { LoginPage } from '@pages/login/login.component';
 import { AuthGuard } from '@guards/auth.guard';
 import { LoginFinishPage } from '@pages/login-finish/login-finish.component';
 import { MailPage } from '@pages/mail/mail.component';
+import { ProjectsPage } from '@pages/projects/projects.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
   { path: 'Home', component: HomePage, canActivate: [AuthGuard], data: { title: 'Home', breadcrumb: 'Home', icon: faHome } },
-  { path: 'Rancho', component: RanchoPage, canActivate: [AuthGuard], data: { title: 'Rancho', breadcrumb: 'Rancho', icon: faHardHat } },
   { path: 'Mail', component: MailPage, canActivate: [AuthGuard], data: { title: 'Mail', breadcrumb: 'Mail', icon: faEnvelope } },
+  { path: 'Rancho', component: ProjectsPage, canActivate: [AuthGuard], data: { title: 'Projetos', breadcrumb: 'Projetos', icon: faHardHat } },
   { path: 'RanchoFinancas', component: RanchoPage, canActivate: [AuthGuard], data: { title: 'Finanças', breadcrumb: 'Finanças', icon: faPiggyBank } },
   {
     path: 'Template',
